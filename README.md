@@ -1,4 +1,4 @@
-# NASA Headquarters
+# Nasa Headquarters
 By: Nav and Connor
 ## Description
 ```
