@@ -13,26 +13,60 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light display: flex; justify-content: space-between;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse show; d-flex justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light display: flex; justify-content: space-between;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">NASA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse show; d-flex justify-content-end" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </div>
                 </div>
             </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row container-fluid p-3 my-3 text-black ">
+            <div class="col-sm-4">
+                <h1>My First Bootstrap Page</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum provident ab facere quidem ipsum beatae
+                    eius accusamus assumenda, totam eaque fugit consectetur possimus aut necessitatibus numquam debitis
+                    nesciunt voluptatibus modi.</p>
+            </div>
+            <div class="col-sm-8">
+                <img src="" id="picture of the day" alt="picture of the day">
+            </div>
         </div>
-    </nav>
-
-
-
+        <div class="row">
+            <div class="col-12">
+                <fieldset>
+                    <label for="rover">Select a Rover</label>
+                    <select name="speed" id="speed">
+                        <option disabled selected>Select</option>
+                        <option value="curiosity">Curiosity</option>
+                        <option value="opportunity">Opportunity</option>
+                        <option value="spirit">Spirit</option>
+                    </select>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row container-fluid p-3 my-3 text-black ">
+            <div class="col-sm-6">
+                <h1>My First Bootstrap Page</h1>
+            </div>
+            <div class="col-sm-6">
+                <img src="" id="rover picture" alt="picture of rover">
+            </div>
+        </div>
+    </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="assets/js/script.js"></script>
