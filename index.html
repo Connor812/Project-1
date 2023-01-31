@@ -36,8 +36,8 @@
     <main>
         <div class="row container-fluid p-3 my-3 text-black ">
             <div class="col-sm-4">
-                <h1>My First Bootstrap Page</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum provident ab facere quidem ipsum beatae
+                <div class="fs-1" id="pod-title">My First Bootstrap Page</div>
+                <p id="pod-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum provident ab facere quidem ipsum beatae
                     eius accusamus assumenda, totam eaque fugit consectetur possimus aut necessitatibus numquam debitis
                     nesciunt voluptatibus modi.</p>
             </div>
@@ -47,9 +47,9 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <fieldset>
+                <fieldset id="input-info">
                     <label for="rover">Select a Rover</label>
-                    <select name="speed" id="speed">
+                    <select name="rover" id="rover">
                         <option disabled selected>Select</option>
                         <option value="curiosity">Curiosity</option>
                         <option value="opportunity">Opportunity</option>
@@ -58,11 +58,11 @@
                 </fieldset>
             </div>
         </div>
-        <div class="row container-fluid p-3 my-3 text-black ">
+        <div class="row container-fluid p-3 my-3 text-black" id="rover-pic-container">
             <div class="col-sm-6">
                 <h1>My First Bootstrap Page</h1>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" >
                 <img src="" id="rover picture" alt="picture of rover">
             </div>
         </div>
