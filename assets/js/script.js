@@ -118,16 +118,22 @@ function getMarsRoverPic() {
             console.log(roverData.photos[0].rover.launch_date);
 
             for (let i = 0; i < roverData.photos.length; i++) {
+                sol = roverData.photos[0].sol;
+                console.log(sol);
+                solString = sol.toString();
+                console.log(solString);
+                
                 roverContainer = `
-            <div class="col-sm-6">
+            <div id="rover-pictures" class="columns">
+            <div class="column">
             <div>Rover Name: ${roverData.photos[i].rover.name}</div>
             <div>Camera: ${roverData.photos[i].camera.full_name}</div>
             <div>Launch Date: ${roverData.photos[i].rover.launch_date}</div>
             <div>Landing Date: ${roverData.photos[i].rover.landing_date}</div>
-            <div>Sol (Mar's Date): ${roverData.photos[i].rover.sol}</div>
+            <div>Sol (Mar's Date): ${solString}</div>
             </div>
-            <div class="col-sm-6">
-            <img src="${roverData.photos[i].img_src}" id="rover-picture${i}" alt="picture of rover">
+            <div class="column">
+            <img src="${roverData.photos[i].img_src}" id="rover-picture${i}" alt="picture of rover" class="rover-image">
             </div>`
             
             $('#rover-pic-container').append(roverContainer);

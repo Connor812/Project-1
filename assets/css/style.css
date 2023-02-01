@@ -1,137 +1,33 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    /* z-index: 2; */
-}
-
 body {
-    font-family: 'Space Mono', monospace;
-    color: #fff
+    background-color: grey;
 }
 
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-    padding-top: 20px;
-    font-family: 'Space Mono', monospace;
-    z-index: 2;
+#picture-of-the-day {
+    width: 400px;
 }
 
-#navbarNavAltMarkup {
-    padding-top: 15px;
-    float: right;
-    font-size: 10px;
+#picture-of-the-day-container {
+    border: 5px solid black;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.211);
+    color: white;
 }
 
-header nav {
-    padding-top: 10px;
-    backdrop-filter: blur(0.5rem);
+#select-rover {
+    border: 5px solid black;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.211);
 }
 
-.navbar-brand {
-    background: hsl(0, 0%, 100%, 0.1);
+#rover-img {
+    width: 400px;
 }
 
-.navbar-menu {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    min-width: 300px;
-}
-
-.navbar-start {
-    display: flex;
-}
-
-.navbar-nav a {
-    display: inline;
-    font-weight: bold;
-    display: block;
-    padding: 14px 16px;
-    /* color: #fff; */
-    text-decoration: none;
-    transition-duration: 0.4s;
-    font-size: 10px;
-}
-
-.navbar-nav a:hover {
-    color: rgb(0, 0, 0);
-    font-size: 22px;
-    box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
-}
-
-.info {
-    color: #fff;
-    font-size: 20px;
-    width: 100%;
-    display: inline-block;
-    justify-content: center;
-    z-index: 2;
-    /* position: relative; */
-}
-
-#rover {
-    color: #000
-}
-
-.col-sm-4 {
-    background: hsl(0 0% 100% / 0.1);
-}
-
-.col-sm-8 {
-    background: hsl(0 0% 100% / 0.1);
-}
-
-.col-sm-6 {
-    background: hsl(0 0% 100% / 0.1);
-}
-
-#datepicker {
-    color: #000;
-}
-
-#camera {
-    color: #000
-}
-
-@keyframes move-twinkle-back {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: -10000px 5000px
-    }
-}
-
-/* .stars,
-.twinkling {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    display: block;
-    background-size: cover
-} */
-
-.stars {
-    background: #000 url(../images/stars.png) repeat top center;
-    background-attachment: fixed;
-    z-index: 0;
-}
-
-.twinkling {
-    background: transparent url(../images/twinkling.png) repeat top center;
-    z-index: 1;
-    animation: move-twinkle-back 200s linear infinite;
+#rover-pictures {
+    border: 5px solid black;
+    margin: 20px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.211);
 }
