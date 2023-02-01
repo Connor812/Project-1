@@ -20,6 +20,7 @@ header {
     font-family: 'Space Mono', monospace;
     z-index: 2;
 }
+
 #navbarNavAltMarkup {
     padding-top: 15px;
     margin-right: 20px;
@@ -33,11 +34,11 @@ header nav {
     backdrop-filter: blur(0.5rem);
 }
 
-.container-fluid {
+.navbar-brand {
     background: hsl(0, 0%, 100%, 0.1);
 }
 
-.navbar-nav {
+.navbar-menu {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -47,35 +48,40 @@ header nav {
     min-width: 300px;
 }
 
+.navbar-start {
+    display: flex;
+}
+
 .navbar-nav a {
     display: inline;
     font-weight: bold;
     display: block;
     padding: 14px 16px;
-    color:#fff;
+    /* color: #fff; */
     text-decoration: none;
     transition-duration: 0.4s;
     font-size: 10px;
 }
 
 .navbar-nav a:hover {
-    color:rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     font-size: 22px;
     box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
 }
 
 .info {
-    color:#fff;
+    color: #fff;
     font-size: 20px;
     width: 100%;
     display: inline-block;
     margin: 10px;
     justify-content: center;
     z-index: 2;
+    /* position: relative; */
 }
 
 #rover {
-    color:#000
+    color: #000
 }
 
 .col-sm-4 {
@@ -90,19 +96,33 @@ header nav {
     background: hsl(0 0% 100% / 0.1);
 }
 
-@keyframes move-twinkle-back {
-    from {background-position: 0 0;}
-    to {background-position: -10000px 5000px} 
+#datepicker {
+    color: #000;
 }
 
-.stars, .twinkling {
+#camera {
+    color: #000
+}
+
+@keyframes move-twinkle-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px
+    }
+}
+
+.stars,
+.twinkling {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     background-size: cover
 }
