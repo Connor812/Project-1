@@ -1,14 +1,40 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    color: #fff
+}
+
+
 header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
     margin-top: 20px;
+    font-family: 'Space Mono', monospace;
+    z-index: 2;
+}
+#navbarNavAltMarkup {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-size: 10px;
 }
 
 header nav {
-    padding-top: 15px;
+    padding-top: 10px;
     margin-right: 20px;
+    backdrop-filter: blur(0.5rem);
+}
+
+.container-fluid {
+    background: hsl(0, 0%, 100%, 0.1);
 }
 
 .navbar-nav {
@@ -26,7 +52,7 @@ header nav {
     font-weight: bold;
     display: block;
     padding: 14px 16px;
-    color:rgba(0, 0, 0, 0.514);
+    color:#fff;
     text-decoration: none;
     transition-duration: 0.4s;
     font-size: 10px;
@@ -39,11 +65,56 @@ header nav {
 }
 
 .info {
-    color:rgb(0, 0, 0);
+    color:#fff;
     font-size: 20px;
     width: 100%;
     display: inline-block;
     margin: 10px;
     justify-content: center;
+    z-index: 2;
 }
 
+#rover {
+    color:#000
+}
+
+.col-sm-4 {
+    background: hsl(0 0% 100% / 0.1);
+}
+
+.col-sm-8 {
+    background: hsl(0 0% 100% / 0.1);
+}
+
+.col-sm-6 {
+    background: hsl(0 0% 100% / 0.1);
+}
+
+@keyframes move-twinkle-back {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px} 
+}
+
+.stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    background-size: cover
+}
+
+.stars {
+    background: #000 url(../images/stars.png) repeat top center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.twinkling {
+    background: transparent url(../images/twinkling.png) repeat top center;
+    z-index: 1;
+    animation: move-twinkle-back 200s linear infinite;
+}
