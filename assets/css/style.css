@@ -1,9 +1,28 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    color:rgb(7, 7, 7);
+}
+
+
 header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
     margin-top: 20px;
+    font-family: 'Space Mono', monospace;
+}
+#navbarNavAltMarkup {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-size: 10px;
 }
 
 header nav {
@@ -39,7 +58,7 @@ header nav {
 }
 
 .info {
-    color:rgb(0, 0, 0);
+    color:rgb(7, 7, 7);
     font-size: 20px;
     width: 100%;
     display: inline-block;
@@ -47,3 +66,31 @@ header nav {
     justify-content: center;
 }
 
+@keyframes move-twinkle-back {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px} 
+}
+
+.stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    background-size: cover
+}
+
+.stars {
+    background: #000 url(../images/stars.png) repeat top center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.twinkling {
+    background: transparent url(../images/twinkling.png) repeat top center;
+    z-index: 1;
+    animation: move-twinkle-back 200s linear infinite
+}
