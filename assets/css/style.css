@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 body {
@@ -16,21 +16,19 @@ header {
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
-    margin-top: 20px;
+    padding-top: 20px;
     font-family: 'Space Mono', monospace;
     z-index: 2;
 }
 
 #navbarNavAltMarkup {
     padding-top: 15px;
-    margin-right: 20px;
     float: right;
     font-size: 10px;
 }
 
 header nav {
     padding-top: 10px;
-    margin-right: 20px;
     backdrop-filter: blur(0.5rem);
 }
 
@@ -74,7 +72,6 @@ header nav {
     font-size: 20px;
     width: 100%;
     display: inline-block;
-    margin: 10px;
     justify-content: center;
     z-index: 2;
     /* position: relative; */
@@ -114,7 +111,7 @@ header nav {
     }
 }
 
-.stars,
+/* .stars,
 .twinkling {
     position: absolute;
     top: 0;
@@ -125,7 +122,7 @@ header nav {
     height: auto;
     display: block;
     background-size: cover
-}
+} */
 
 .stars {
     background: #000 url(../images/stars.png) repeat top center;
