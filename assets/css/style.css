@@ -2,11 +2,12 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    z-index: 2;
 }
 
 body {
     font-family: 'Space Mono', monospace;
-    color:rgb(7, 7, 7);
+    color: #fff
 }
 
 
@@ -17,6 +18,7 @@ header {
     padding: 10px;
     margin-top: 20px;
     font-family: 'Space Mono', monospace;
+    z-index: 2;
 }
 #navbarNavAltMarkup {
     padding-top: 15px;
@@ -26,8 +28,13 @@ header {
 }
 
 header nav {
-    padding-top: 15px;
+    padding-top: 10px;
     margin-right: 20px;
+    backdrop-filter: blur(0.5rem);
+}
+
+.container-fluid {
+    background: hsl(0, 0%, 100%, 0.1);
 }
 
 .navbar-nav {
@@ -45,7 +52,7 @@ header nav {
     font-weight: bold;
     display: block;
     padding: 14px 16px;
-    color:rgba(0, 0, 0, 0.514);
+    color:#fff;
     text-decoration: none;
     transition-duration: 0.4s;
     font-size: 10px;
@@ -58,12 +65,29 @@ header nav {
 }
 
 .info {
-    color:rgb(7, 7, 7);
+    color:#fff;
     font-size: 20px;
     width: 100%;
     display: inline-block;
     margin: 10px;
     justify-content: center;
+    z-index: 2;
+}
+
+#rover {
+    color:#000
+}
+
+.col-sm-4 {
+    background: hsl(0 0% 100% / 0.1);
+}
+
+.col-sm-8 {
+    background: hsl(0 0% 100% / 0.1);
+}
+
+.col-sm-6 {
+    background: hsl(0 0% 100% / 0.1);
 }
 
 @keyframes move-twinkle-back {
@@ -92,5 +116,5 @@ header nav {
 .twinkling {
     background: transparent url(../images/twinkling.png) repeat top center;
     z-index: 1;
-    animation: move-twinkle-back 200s linear infinite
+    animation: move-twinkle-back 200s linear infinite;
 }
