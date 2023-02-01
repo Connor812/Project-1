@@ -8,13 +8,16 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <link href="./assets/css/style.css" rel="stylesheet">
     <title>Nasa Head Quarters</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-light display: flex; justify-content: space-between;">
+        <nav class="navbar navbar-expand-sm">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">NASA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -24,20 +27,22 @@
                 </button>
                 <div class="collapse navbar-collapse show; d-flex justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        <a class="nav-link" href="#">Features</a>
-                        <a class="nav-link" href="#">Pricing</a>
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a class="nav-link active" aria-current="page" href="#">API</a>
+                        <a class="nav-link" href="#">Rover</a>
+                        <a class="nav-link" href="#">Galaxy</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
-        <div class="row container-fluid p-3 my-3 text-black ">
+    <main class="info">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="row container-fluid p-3 my-3 text-white ">
             <div class="col-sm-4">
                 <div class="fs-1" id="pod-title">My First Bootstrap Page</div>
-                <p id="pod-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum provident ab facere quidem ipsum beatae
+                <p id="pod-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum provident ab
+                    facere quidem ipsum beatae
                     eius accusamus assumenda, totam eaque fugit consectetur possimus aut necessitatibus numquam debitis
                     nesciunt voluptatibus modi.</p>
             </div>
@@ -45,8 +50,8 @@
                 <img src="" id="picture of the day" alt="picture of the day">
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
+        <div class="col-12">
+            <div class="row">
                 <fieldset id="input-info">
                     <label for="rover">Select a Rover</label>
                     <select name="rover" id="rover">
@@ -58,17 +63,19 @@
                 </fieldset>
             </div>
         </div>
-        <div class="row container-fluid p-3 my-3 text-black" id="rover-pic-container">
+        <div class="row container-fluid p-3 my-3 text-white" id="rover-pic-container">
             <div class="col-sm-6">
                 <h1>My First Bootstrap Page</h1>
             </div>
-            <div class="col-sm-6" >
+            <div class="col-sm-6">
                 <img src="" id="rover picture" alt="picture of rover">
             </div>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
