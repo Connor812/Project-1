@@ -2,14 +2,17 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* z-index: 2; */
 }
 
 body {
     font-family: 'Space Mono', monospace;
-    color: #fff
+    color: #fff;
+    z-index: 2;
 }
 
+html, body {
+    overflow-x: hidden;
+}
 
 header {
     display: flex;
@@ -19,6 +22,12 @@ header {
     padding-top: 20px;
     font-family: 'Space Mono', monospace;
     z-index: 2;
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    color:#fff;
 }
 
 #navbarNavAltMarkup {
@@ -32,8 +41,8 @@ header nav {
     backdrop-filter: blur(0.5rem);
 }
 
-.navbar-brand {
-    background: hsl(0, 0%, 100%, 0.1);
+.navbar {
+    background: hsl(0 0% 100% / 0.1);
 }
 
 .navbar-menu {
@@ -50,21 +59,25 @@ header nav {
     display: flex;
 }
 
-.navbar-nav a {
+.navbar-menu a {
     display: inline;
     font-weight: bold;
     display: block;
     padding: 14px 16px;
-    /* color: #fff; */
     text-decoration: none;
     transition-duration: 0.4s;
     font-size: 10px;
+    color: #fff;
 }
 
-.navbar-nav a:hover {
-    color: rgb(0, 0, 0);
+.navbar-menu a:hover {
+    text-decoration: none;
     font-size: 22px;
     box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+}
+
+#pod-description {
+    font-size: 15px;
 }
 
 .info {
@@ -124,14 +137,14 @@ header nav {
     background-size: cover
 } */
 
-.stars {
-    background: #000 url(../images/stars.png) repeat top center;
-    background-attachment: fixed;
-    z-index: 0;
-}
-
 .twinkling {
     background: transparent url(../images/twinkling.png) repeat top center;
     z-index: 1;
     animation: move-twinkle-back 200s linear infinite;
 }
+
+.stars {
+    background: #000 url(../images/stars.png) repeat top center;
+    background-attachment: fixed;
+    z-index: 0;
+} 

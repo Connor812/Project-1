@@ -1,5 +1,5 @@
-# Nasa Headquarters
-By: Nav and Connor
+# The Wonders of Our Galaxy
+
 ## Description
 ```
 User Story
