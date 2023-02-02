@@ -38,7 +38,7 @@ $('#rover').change(function () {
     $('#datepicker').remove();
 
     if (roverChoice == 'curiosity') {
-        selectCamera = `<label  id="camera-label" for="camera">Select a Camera</label>
+        selectCamera = `<label  id="camera-label" for="camera" class="has-text-white is-size-4">Select a Camera</label>
         <select name="camera" id="camera" >
             <option disabled selected>Select</option>
             <option value="fhaz">FHAZ</option>
@@ -50,7 +50,7 @@ $('#rover').change(function () {
             <option value="navcam">NAVCAM</option>
             </select>`;
     } else {
-        selectCamera = `<label id="camera-label" for="camera">Select a Camera</label>
+        selectCamera = `<label id="camera-label" for="camera" class="has-text-white is-size-4">Select a Camera</label>
         <select name="camera" id="camera">
             <option disabled selected>Select</option>
             <option value="fhaz">FHAZ</option>
@@ -65,7 +65,7 @@ $('#rover').change(function () {
 
 function appendSelectCamera() {
 
-    $('#input-info').append(selectCamera);
+    $('#select-camera').append(selectCamera);
     $('#camera').change(function () {
 
         cameraChoice = this.value;
@@ -80,13 +80,13 @@ function appendSelectDate() {
     $('#datepickerlabel').remove();
     $('#datepicker').remove();
 
-    selectDate = `<label id="datepickerlabel">Date: <input class="selector" placeholder="Select Date" type="text" id="datepicker"></label>`;
+    selectDate = `<label id="datepickerlabel" class="has-text-white is-size-4">Select a Date</label><input placeholder="Select Date" type="text" id="datepicker">`;
     $(function () {
         $('#datepicker').datepicker({ maxDate: currentDay});
     
     })
 
-    $('#input-info').append(selectDate);
+    $('#select-date').append(selectDate);
     $('#datepicker').change(function () {
         dateChoice = this.value;
         split = dateChoice.split('/').reverse().join('-');
@@ -98,9 +98,9 @@ function appendSelectDate() {
 }
 
 function getMarsRoverPic() {
-    console.log(roverChoice);
-    console.log(cameraChoice);
-    console.log(dateChoice);
+
+    $('.rover-pictures').remove();
+
     let roverLink = 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + roverChoice + '/photos?earth_date=' + split + '&camera=' + cameraChoice + '&api_key=C6yhxCi7h13IgKJLsLTe3ENPcZmasGYTBSuP3B0q';
     console.log(roverLink);
 
@@ -110,13 +110,12 @@ function getMarsRoverPic() {
         })
         .then(function (roverData) {
             console.log(roverData);
-            console.log(roverData.photos[0].img_src);
-            console.log(roverData.photos[0].rover.name);
-            console.log(roverData.photos[0].camera.full_name);
-            console.log(roverData.photos[0].sol);
-            console.log(roverData.photos[0].rover.landing_date);
-            console.log(roverData.photos[0].rover.launch_date);
-
+            
+            if (roverData.photos.length == 0) {
+                noPhotoError = `<div id="rover-pictures" class="p-1 is-flex is-justify-content-center is-align-items-center has-text-white is-size-1 rover-pictures">No Images Avalible. Please Select A Different Date.</div>`
+                $('#rover-pic-container').append(noPhotoError);
+                return;
+            }
             for (let i = 0; i < roverData.photos.length; i++) {
                 sol = roverData.photos[0].sol;
                 console.log(sol);
@@ -124,15 +123,15 @@ function getMarsRoverPic() {
                 console.log(solString);
                 
                 roverContainer = `
-            <div id="rover-pictures" class="columns">
-            <div class="column">
-            <div>Rover Name: ${roverData.photos[i].rover.name}</div>
+            <div id="rover-pictures" class="columns rover-pictures">
+            <div class="column has-text-white">
+            <div class="is-size-2">Rover Name: ${roverData.photos[i].rover.name}</div>
             <div>Camera: ${roverData.photos[i].camera.full_name}</div>
             <div>Launch Date: ${roverData.photos[i].rover.launch_date}</div>
             <div>Landing Date: ${roverData.photos[i].rover.landing_date}</div>
             <div>Sol (Mar's Date): ${solString}</div>
             </div>
-            <div class="column">
+            <div class="column is-flex is-justify-content-center">
             <img src="${roverData.photos[i].img_src}" id="rover-picture${i}" alt="picture of rover" class="rover-image">
             </div>`
             
@@ -141,10 +140,13 @@ function getMarsRoverPic() {
             
             }
         })
-
+appendToTheTopButton();
 }
 
-
+function appendToTheTopButton() {
+    toTheTopButton = `<button id="to-the-top" class="button is-warning"><a class="has-text-black" href="#top-of-page">Go To Top Of Page</a></button>`;
+    $('#to-the-top-button').append(toTheTopButton);
+}
 
 
 

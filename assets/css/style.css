@@ -54,11 +54,40 @@ h1 {
     color: white;
 }
 
+#mars-rover-photos {
+    text-align: center;
+}
+
+strong {
+    color: white;
+}
+
 #select-rover {
     border: 5px solid black;
     margin: 20px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.211);
+}
+
+#rover {
+    border-radius: 5px;
+    padding: 7px;
+    width: 300px;
+    margin: 6px 0px 0px 26px;
+}
+
+#camera {
+    border-radius: 5px;
+    padding: 7px;
+    width: 300px;
+    margin: 6px 0px 0px 4px;
+}
+
+#datepicker {
+    border-radius: 5px;
+    padding: 7px;
+    width: 300px;
+    margin: 6px 0px 0px 39px;
 }
 
 #rover-img {
@@ -71,9 +100,6 @@ h1 {
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.211);
 }
-
-.stars {
-    background: #000 url(../images/stars.png) repeat top center;
-    background-attachment: fixed;
-    z-index: 0;
-} 
+#to-the-top {
+    margin: 10px;
+}

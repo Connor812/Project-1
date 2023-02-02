@@ -47,21 +47,43 @@
         </div>
     </div>
 
-    <div id="select-rover" class="columns">
-        <div class="column">
-            <fieldset id="input-info">
-                <label for="rover">Select a Rover</label>
-                <select name="rover" id="rover">
-                    <option disabled selected class="has-text-white">Select</option>
-                    <option value="curiosity">Curiosity</option>
-                    <option value="opportunity">Opportunity</option>
-                    <option value="spirit">Spirit</option>
-                </select>
-            </fieldset>
+    <div id="select-rover" class="p-2">
+        <div id="mars-rover-photos" class="has-text-white">
+            <div class="is-size-2">Mars Rover Photos</div>
+            <div>There are currently 3 rovers roaming around the serface of the planet mars. There names are Curiosity,
+                Opportunity, and Spirit. They have all made the long journey from our Earth, through the stars in space,
+                to the planet 133.71 million kilometers we call Mars. These rovers almost took a year to travel through
+                the emptiness of space to get where they are today.</div>
+                <div>Below you have the option to <strong>select the rover</strong> you would like to to see the pictures it's taken. You can <strong>select the camera</strong> you would like to see the pictures taken for. And lastely, you can <strong>select the date</strong> you would like to see the pictures taken on that day.</div>
+                <div class="is-size-2">Select The Rover You Would like to see pictures for</div>
+            </div>
+        <div class="columns">
+            <div class="column">
+                <fieldset id="input-info">
+                    <div>
+                        <label for="rover" class="has-text-white is-size-4">Select a Rover</label>
+                        <select name="rover" id="rover">
+                            <option disabled selected class="has-text-white">Select</option>
+                            <option value="curiosity">Curiosity</option>
+                            <option value="opportunity">Opportunity</option>
+                            <option value="spirit">Spirit</option>
+                        </select>
+                    </div>
+
+                    <div id="select-camera">
+                    </div>
+
+                    <div id="select-date">
+                    </div>
+
+                </fieldset>
+            </div>
         </div>
     </div>
 
-    <div id="rover-pic-container"></div>
+    <div id="rover-pic-container">
+    </div>
+    <div id="to-the-top-button"></div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
