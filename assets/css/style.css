@@ -17,9 +17,8 @@ header {
 }
 
 #title {
-    font-family: 'Space Theme', sans-serif;
-    color:rgba(255, 255, 255, 0.411);
-    text-shadow: 2px 4px #000;
+    font-family: 'SPACE EXPLORER', sans-serif;
+    color: black;
     text-align: center;
     
 }
@@ -130,15 +129,15 @@ strong {
 }
 
 #select-a-rover {
-    font-family: 'WW Digital', sans-serif;
+    font-family: 'Space Theme', sans-serif;
 }
 
 #select-camera {
-    font-family: 'WW Digital', sans-serif;
+    font-family: 'Space Theme', sans-serif;
 }
 
 #select-date {
-    font-family: 'WW Digital', sans-serif;
+    font-family: 'Space Theme', sans-serif;
 }
 
 .is-size-5 {
@@ -152,7 +151,7 @@ strong {
     padding: 7px;
     width: 300px;
     margin: 6px 0px 0px 26px;
-    font-family: 'Space Theme', sans-serif;
+    font-family: 'WW Digital', sans-serif;
     color:yellow;
     background-color: #000;
 }
@@ -162,7 +161,7 @@ strong {
     padding: 7px;
     width: 300px;
     margin: 6px 0px 0px 4px;
-    font-family: 'Space Theme', sans-serif;
+    font-family: 'WW Digital', sans-serif;
     color: yellow;
     background-color: #000;
 }
@@ -172,13 +171,20 @@ strong {
     padding: 7px;
     width: 300px;
     margin: 6px 0px 0px 39px;
-    font-family: 'Space Theme', sans-serif;
+    font-family: 'WW Digital', sans-serif;
     color: yellow;
     background-color: #000;
 }
 
 .ui-state-default {
     width: 100%;
+}
+.button-style-css {
+    font-family: 'WW Digital', sans-serif;
+    color:#000;
+    background-color: yellow;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 #rover-img {
@@ -219,4 +225,26 @@ strong {
 
 .hide {
     display: none;
+}
+
+@media screen and (max-width: 558px) {
+    #input-info {
+        text-align: center;
+        margin: 0px;
+    }
+    #rover, #camera, #datepicker {
+        margin: 0px;
+        width: 150px;
+    }
+    #list {
+        text-align: inline;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media  screen and (max-width: 1016px) {
+    li a {
+        padding: 7px;
+    }
 }
