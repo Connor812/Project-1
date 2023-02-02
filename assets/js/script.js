@@ -1,3 +1,4 @@
+let savedRoverPictures = [];
 let currentDay = dayjs().format('MM/DD/YYYY');
 let roverChoice;
 let cameraChoice;
@@ -8,6 +9,9 @@ let roverData;
 console.log(currentDay);
 
 let pictureLink = 'https://api.nasa.gov/planetary/apod?api_key=C6yhxCi7h13IgKJLsLTe3ENPcZmasGYTBSuP3B0q';
+
+
+ 
 
 init();
 
@@ -25,7 +29,31 @@ fetch(pictureLink)
     $('#pod-title').text(pictureData.title);
     $('#pod-description').text(pictureData.explanation);
     $('#picture-of-the-day').attr('src', pictureData.url);
+
+    stored = localStorage.getItem('SavedRoverPictures');
+    savedRoverPictures = JSON.parse(stored);
+    console.log(savedRoverPictures);
 })
+}
+
+$('#display-saved-images').click(function() {
+    $('.rover-pictures').remove();
+    $('#to-the-top').remove();
+    stored = localStorage.getItem('SavedRoverPictures');
+    savedRoverPictures = JSON.parse(stored);
+    console.log(savedRoverPictures.length);
+
+    renderSavedImages();
+})
+
+function renderSavedImages() {
+    for (let o = 0; o < savedRoverPictures.length; o++) {
+        $('#rover-pic-container').append(savedRoverPictures[o]);
+        
+    }
+    $('button').addClass('hide');
+    $('#display-saved-images').removeClass('hide');
+    appendToTheTopButton();
 }
 
 $('#rover').change(function () {
@@ -100,6 +128,7 @@ function appendSelectDate() {
 function getMarsRoverPic() {
 
     $('.rover-pictures').remove();
+    $('#to-the-top').remove();
 
     let roverLink = 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + roverChoice + '/photos?earth_date=' + split + '&camera=' + cameraChoice + '&api_key=C6yhxCi7h13IgKJLsLTe3ENPcZmasGYTBSuP3B0q';
     console.log(roverLink);
@@ -130,10 +159,15 @@ function getMarsRoverPic() {
             <div>Launch Date: ${roverData.photos[i].rover.launch_date}</div>
             <div>Landing Date: ${roverData.photos[i].rover.landing_date}</div>
             <div>Sol (Mar's Date): ${solString}</div>
+            <div id="save-button" class="save-button">
+            <button id="save-button${i}" value="save-button${i}" class="button is-warning">Save Image</button>
+            </div>
             </div>
             <div class="column is-flex is-justify-content-center">
             <img src="${roverData.photos[i].img_src}" id="rover-picture${i}" alt="picture of rover" class="rover-image">
+            </div>
             </div>`
+            
             
             $('#rover-pic-container').append(roverContainer);
             
@@ -148,27 +182,23 @@ function appendToTheTopButton() {
     $('#to-the-top-button').append(toTheTopButton);
 }
 
+let saveButton = document.querySelector('#rover-pic-container')
 
+let saveButtonHandler = function(event) {
+    savedRoverPictures = [];
+    stored = localStorage.getItem('SavedRoverPictures');
+    savedRoverPictures = JSON.parse(stored);
+    console.log(savedRoverPictures);
+    if (savedRoverPictures == null) {
+        savedRoverPictures = [];
+    }
+    let saved = event.target.getAttribute('value');
+    let saved2 = document.getElementById(saved);
+    let elementHTML = saved2.parentElement.parentElement.parentElement.outerHTML;
+    console.log(elementHTML);
+    savedRoverPictures.push(elementHTML);
+    localStorage.setItem('SavedRoverPictures', JSON.stringify(savedRoverPictures));
+}
 
+saveButton.addEventListener('click', saveButtonHandler);
 
-
-
-// Fetch link for picture of the day
-
-// fetch(pictureLink)
-// .then(function (pictureResponse) {
-//     return pictureResponse.json();
-// })
-// .then(function (pictureData) {
-//     console.log(pictureData);
-// })
-
-// Fetch link for Mars Rover pictures
-
-// fetch(roverLink)
-// .then(function (roverResponse) {
-//     return roverResponse.json();
-// })
-// .then(function (roverData) {
-//     console.log(roverData)
-// })

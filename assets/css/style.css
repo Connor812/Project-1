@@ -212,3 +212,7 @@ strong {
     background-attachment: fixed;
     z-index: 0;
 } 
+
+.hide {
+    display: none;
+}
