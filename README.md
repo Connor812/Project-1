@@ -5,7 +5,7 @@ By: Connor and Nav
 
 ## Description
 
-The goal of this project was to develop a webpage from the ground up using at least two server-side APIs. When it came to using open source liabraries, we were advised to use a CSS framework other than Bootstrap: we decided to use Bulma. Another requirement was to use client-side storage to store persistent data, and the page had to be interactive.
+The goal of this project was to develop a webpage from the ground up using at least two server-side APIs. When it came to using open source libraries, we were advised to use a CSS framework other than Bootstrap: we decided to use Bulma. Another requirement was to use client-side storage to store persistent data, and the page had to be interactive.
 
 When doing some research, a big interest was placed in NASA and what they offered to be used as free API's. 
 
@@ -13,12 +13,12 @@ Api Keys Used:
 - Astronomy Picture of the Day (APOD)
 - Mars Rover Photos
 
-The most popular website at NASA is the Astronomy Picture of the Day. They even state for it to be the most popular website acroos all federal agencies! With this API key, you are able to view a picture of the galaxy using certain parameters.
+The most popular website at NASA is the Astronomy Picture of the Day. They even state for it to be the most popular website across all federal agencies! With this API key, you are able to view a picture of the galaxy using certain parameters.
 
 The second API was designed to collect data gathered by NASA's 3 rovers called Curiosity, Opportunity, and Spirit on Mars. There are several possible queries that can be made: organized by the sol (Martian rotation or day) on which they were taken, or even the Earth date. Along with querying by date, you are also able to filter results using the type of camera with which it was taken.
 The photos that are generated based on the criteria will also present information such as the landing date and launch date.
 
-![Webpage](./assets/images/webpage.png)
+![Webpage](./assets/images/space-quest.jpg)
 
 #
 ## User Story
@@ -47,10 +47,11 @@ WHEN all three selections are made
 THEN I am presented with photos that rover has taken, along with a description of the camera, launch date, landing date, and sol (Mar's date) next to it
 WHEN I get to the bottom of the page
 THEN I am able to click a button to bring me to the top
-WHEN I refresh the page
-THEN the previous search criteria is saved in local storage
+WHEN I click save image
+THEN the image and crieteria are saved to local storage
+WHEN I click "display saved images"
+THEN I am able to view the pictures I saved
 ```
-
 #
 ## Deployment Link
 [Web Accessibility]()

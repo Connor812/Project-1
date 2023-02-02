@@ -17,16 +17,16 @@ header {
 }
 
 #title {
-    font-family: 'Space Theme', sans-serif;
-    color:rgba(255, 255, 255, 0.411);
-    text-shadow: 2px 4px #000;
+    font-family: 'SPACE EXPLORER', sans-serif;
+    color: black;
     text-align: center;
     
 }
 
 .navbar {
     margin-top: 30px;
-    background: hsl(0 0% 100% / 0.1);
+    background: rgb(98,98,98);
+    background: linear-gradient(90deg, rgba(98,98,98,0.83) 0%, rgba(255,255,255,0.83) 51%, rgba(98,98,98,0.83) 100%);
 }
 
 li a:hover {
@@ -88,7 +88,6 @@ h1 {
     color:#fff;
 }
 
-
 #picture-of-the-day-container {
     border: 5px solid rgba(255, 255, 255, 0.411);
     margin: 20px;
@@ -101,7 +100,7 @@ h1 {
     text-align: center;
 }
 
-strong {
+.bold {
     color: white;
 }
 
@@ -120,6 +119,8 @@ strong {
 
 #instructions {
     color: rgb(161, 46, 46);
+    display: flex;
+    align-items: center;
 }
 
 #select-rover {
@@ -130,29 +131,31 @@ strong {
 }
 
 #select-a-rover {
-    font-family: 'WW Digital', sans-serif;
+    font-family: 'Space Theme', sans-serif;
 }
 
 #select-camera {
-    font-family: 'WW Digital', sans-serif;
+    font-family: 'Space Theme', sans-serif;
 }
 
 #select-date {
-    font-family: 'WW Digital', sans-serif;
+    font-family: 'Space Theme', sans-serif;
 }
 
-.is-size-5 {
+#start {
     font-family: 'WW Digital', sans-serif;
-    text-align:left;
-    color:rgba(255, 255, 255, 0.233)
+    text-align: left;
+    color:rgba(255, 255, 255, 0.233);
+    font-size: 30px;
 }
 
 #rover {
     border-radius: 5px;
     padding: 7px;
     width: 300px;
-    margin: 6px 0px 0px 26px;
-    font-family: 'Space Theme', sans-serif;
+    margin-left: 5px;
+    font-family: 'WW Digital', sans-serif;
+    font-size: 20px;
     color:yellow;
     background-color: #000;
 }
@@ -161,8 +164,9 @@ strong {
     border-radius: 5px;
     padding: 7px;
     width: 300px;
-    margin: 6px 0px 0px 4px;
-    font-family: 'Space Theme', sans-serif;
+    margin-left: 4px;
+    font-family: 'WW Digital', sans-serif;
+    font-size: 20px;
     color: yellow;
     background-color: #000;
 }
@@ -171,14 +175,22 @@ strong {
     border-radius: 5px;
     padding: 7px;
     width: 300px;
-    margin: 6px 0px 0px 39px;
-    font-family: 'Space Theme', sans-serif;
+    margin-left: 42px;
+    font-family: 'WW Digital', sans-serif;
+    font-size: 20px;
     color: yellow;
     background-color: #000;
 }
 
 .ui-state-default {
     width: 100%;
+}
+.button-style-css {
+    font-family: 'WW Digital', sans-serif;
+    color:#000;
+    background-color: yellow;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #rover-img {
@@ -219,4 +231,55 @@ strong {
 
 .hide {
     display: none;
+}
+
+@media screen and (max-width: 558px) {
+    #input-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px;
+    }
+    #rover, #camera, #datepicker {
+        margin: 0px;
+        width: 150px;
+    }
+
+    #list {
+        text-align: inline;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media  screen and (max-width: 1016px) {
+    li a {
+        padding: 7px;
+    }
+}
+
+@media screen and (max-width: 1183px) {
+    #alignment-rover, #select-camera, #select-date {
+        display: flex;
+        flex-direction: column;
+    }
+    #rover, #camera, #datepicker {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #instructions {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    iframe {
+        width: 250px;
+        height: 150px;
+    }
 }

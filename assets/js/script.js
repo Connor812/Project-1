@@ -41,7 +41,11 @@ $('#display-saved-images').click(function() {
     $('#to-the-top').remove();
     stored = localStorage.getItem('SavedRoverPictures');
     savedRoverPictures = JSON.parse(stored);
-    console.log(savedRoverPictures.length);
+    if (savedRoverPictures == null) {
+        noSavedPictures = `<div id="rover-pictures" class="p-1 is-flex is-justify-content-center is-align-items-center has-text-white is-size-1 rover-pictures">No Images Are Saved.</div>`
+        $('#rover-pic-container').append(noSavedPictures);
+        return;
+    }
 
     renderSavedImages();
 })
@@ -135,7 +139,13 @@ function getMarsRoverPic() {
 
     fetch(roverLink)
         .then(function (roverResponse) {
+            if (roverResponse.ok) {
             return roverResponse.json();
+            } else {
+                PageError = `<div id="rover-pictures" class="p-1 is-flex is-justify-content-center is-align-items-center has-text-white is-size-1 rover-pictures">404 Page Error Please Try Again.</div>`
+                $('#rover-pic-container').append(PageError);
+                return;
+            }
         })
         .then(function (roverData) {
             console.log(roverData);
