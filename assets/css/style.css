@@ -1,13 +1,96 @@
 body {
     background-color: grey;
+    font-family: 'Space Mono', monospace;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+#title {
+    font-family: 'Space Theme', sans-serif;
+    color:rgba(255, 255, 255, 0.411);
+    text-shadow: 2px 4px #000;
+    text-align: center;
+    
+}
+
+.navbar {
+    margin-top: 30px;
+    background: hsl(0 0% 100% / 0.1);
+}
+
+li a:hover {
+    font-family: 'WW Digital', sans-serif;
+    color:rgb(161, 46, 46);
+    font-size: 22px;
+    box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+}
+
+li {
+    display: inline-block;
+}
+
+div a {
+    display: inline;
+    float: left;
+}
+
+li a { 
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color:rgba(255, 255, 0, 0.692);
+    padding-top: 25px;
+}
+
+#pod-description {
+    font-size: 15px;
+    text-align:center;
+    color: grey;
+    font-family: 'WW Digital', sans-serif;
+}
+
+#pod-title {
+    text-align: center;
+    font-family: 'Space Theme', sans-serif;
 }
 
 #picture-of-the-day {
     width: 400px;
 }
 
+.info {
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    display: inline-block;
+    justify-content: center;
+    z-index: 2;
+}
+
+#rover {
+    color: #000
+}
+
+h1 {
+    font-size: 35px;
+    text-align: center;
+    color:#fff;
+}
+
+
 #picture-of-the-day-container {
-    border: 5px solid black;
+    border: 5px solid rgba(255, 255, 255, 0.411);
     margin: 20px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.211);
@@ -22,11 +105,46 @@ strong {
     color: white;
 }
 
+#mars-photos {
+    font-family: 'Space Theme', sans-serif;
+}
+
+.is-size-3 {
+    font-family: 'Space Theme', sans-serif;
+    color:rgba(255, 255, 255, 0.808)
+}
+
+#description {
+    color: grey;
+}
+
+#instructions {
+    color: rgb(161, 46, 46);
+}
+
 #select-rover {
-    border: 5px solid black;
+    border: 5px solid rgba(255, 255, 255, 0.411);
     margin: 20px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.211);
+}
+
+#select-a-rover {
+    font-family: 'WW Digital', sans-serif;
+}
+
+#select-camera {
+    font-family: 'WW Digital', sans-serif;
+}
+
+#select-date {
+    font-family: 'WW Digital', sans-serif;
+}
+
+.is-size-5 {
+    font-family: 'WW Digital', sans-serif;
+    text-align:left;
+    color:rgba(255, 255, 255, 0.233)
 }
 
 #rover {
@@ -34,6 +152,9 @@ strong {
     padding: 7px;
     width: 300px;
     margin: 6px 0px 0px 26px;
+    font-family: 'Space Theme', sans-serif;
+    color:yellow;
+    background-color: #000;
 }
 
 #camera {
@@ -41,6 +162,9 @@ strong {
     padding: 7px;
     width: 300px;
     margin: 6px 0px 0px 4px;
+    font-family: 'Space Theme', sans-serif;
+    color: yellow;
+    background-color: #000;
 }
 
 #datepicker {
@@ -48,6 +172,9 @@ strong {
     padding: 7px;
     width: 300px;
     margin: 6px 0px 0px 39px;
+    font-family: 'Space Theme', sans-serif;
+    color: yellow;
+    background-color: #000;
 }
 
 #rover-img {
@@ -55,7 +182,7 @@ strong {
 }
 
 #rover-pictures {
-    border: 5px solid black;
+    border: 5px solid rgba(255, 255, 255, 0.411);
     margin: 20px;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.211);
@@ -63,6 +190,28 @@ strong {
 #to-the-top {
     margin: 10px;
 }
+
+@keyframes move-twinkle-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px
+    }
+}
+
+.twinkling {
+    background: transparent url(../images/twinkling.png) repeat top center;
+    z-index: 1;
+    animation: move-twinkle-back 200s linear infinite;
+}
+
+.stars {
+    background: #000 url(../images/stars.png) repeat top center;
+    background-attachment: fixed;
+    z-index: 0;
+} 
 
 .hide {
     display: none;
