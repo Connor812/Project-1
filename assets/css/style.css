@@ -1,5 +1,39 @@
 body {
     background-color: grey;
+    font-family: 'Space Mono', monospace;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 20px;
+    font-family: 'Space Mono', monospace;
+    z-index: 2;
+}
+
+header nav {
+    padding-top: 10px;
+    backdrop-filter: blur(0.5rem);
+}
+
+.navbar {
+    background: hsl(0 0% 100% / 0.1);
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    min-width: 300px;
 }
 
 #picture-of-the-day {
