@@ -177,6 +177,18 @@ strong {
     background-color: #000;
 }
 
+#display-saved-images {
+    font-family: 'Space Theme', sans-serif;
+    color:rgba(255, 255, 255, 0.233);
+    background-color:rgb(161, 46, 46);
+}
+
+.save-button {
+    font-family: 'Space Theme', sans-serif;
+    color:rgba(255, 255, 255, 0.233);
+    background-color:rgb(161, 46, 46);
+}
+
 #rover-img {
     width: 400px;
 }

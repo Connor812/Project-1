@@ -47,8 +47,10 @@ WHEN all three selections are made
 THEN I am presented with photos that rover has taken, along with a description of the camera, launch date, landing date, and sol (Mar's date) next to it
 WHEN I get to the bottom of the page
 THEN I am able to click a button to bring me to the top
-WHEN I refresh the page
-THEN the previous search criteria is saved in local storage
+WHEN I click save image
+THEN the image and crieteria are saved to local storage
+WHEN I click "display saved images"
+THEN I am able to view the pictures I saved
 ```
 
 #
