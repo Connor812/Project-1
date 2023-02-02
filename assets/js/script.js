@@ -153,10 +153,6 @@ function appendToTheTopButton() {
 
 
 
-
-
-
-
 // Fetch link for picture of the day
 
 // fetch(pictureLink)
