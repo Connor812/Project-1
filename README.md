@@ -52,7 +52,6 @@ THEN the image and crieteria are saved to local storage
 WHEN I click "display saved images"
 THEN I am able to view the pictures I saved
 ```
-
 #
 ## Deployment Link
 [Web Accessibility]()
