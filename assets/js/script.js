@@ -9,6 +9,16 @@ console.log(currentDay);
 
 let pictureLink = 'https://api.nasa.gov/planetary/apod?api_key=C6yhxCi7h13IgKJLsLTe3ENPcZmasGYTBSuP3B0q';
 
+// let navBar = document.getElementById("top-of-page");
+// let elementHTML = navBar.outerHTML;
+// console.log(elementHTML);
+
+// let narBar = $('#top-of-page').html();
+// console.log(narBar);
+
+// $('#test').append(narBar);
+ 
+
 init();
 
 function init() {
@@ -100,6 +110,7 @@ function appendSelectDate() {
 function getMarsRoverPic() {
 
     $('.rover-pictures').remove();
+    $('#to-the-top').remove();
 
     let roverLink = 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + roverChoice + '/photos?earth_date=' + split + '&camera=' + cameraChoice + '&api_key=C6yhxCi7h13IgKJLsLTe3ENPcZmasGYTBSuP3B0q';
     console.log(roverLink);
