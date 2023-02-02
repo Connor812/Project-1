@@ -193,7 +193,12 @@ let saveButtonHandler = function(event) {
         savedRoverPictures = [];
     }
     let saved = event.target.getAttribute('value');
+    console.log(saved);
+    if (saved == null) {
+        return;
+    }
     let saved2 = document.getElementById(saved);
+    console.log(saved2);
     let elementHTML = saved2.parentElement.parentElement.parentElement.outerHTML;
     console.log(elementHTML);
     savedRoverPictures.push(elementHTML);
