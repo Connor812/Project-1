@@ -87,7 +87,6 @@ h1 {
     color:#fff;
 }
 
-
 #picture-of-the-day-container {
     border: 5px solid rgba(255, 255, 255, 0.411);
     margin: 20px;
@@ -140,9 +139,9 @@ strong {
     font-family: 'Space Theme', sans-serif;
 }
 
-.is-size-5 {
+#start {
     font-family: 'WW Digital', sans-serif;
-    text-align:left;
+    text-align: left;
     color:rgba(255, 255, 255, 0.233)
 }
 
@@ -150,8 +149,9 @@ strong {
     border-radius: 5px;
     padding: 7px;
     width: 300px;
-    margin: 6px 0px 0px 26px;
+    margin-left: 5px;
     font-family: 'WW Digital', sans-serif;
+    font-size: 20px;
     color:yellow;
     background-color: #000;
 }
@@ -160,8 +160,9 @@ strong {
     border-radius: 5px;
     padding: 7px;
     width: 300px;
-    margin: 6px 0px 0px 4px;
+    margin-left: 4px;
     font-family: 'WW Digital', sans-serif;
+    font-size: 20px;
     color: yellow;
     background-color: #000;
 }
@@ -170,8 +171,9 @@ strong {
     border-radius: 5px;
     padding: 7px;
     width: 300px;
-    margin: 6px 0px 0px 39px;
+    margin-left: 42px;
     font-family: 'WW Digital', sans-serif;
+    font-size: 20px;
     color: yellow;
     background-color: #000;
 }
@@ -183,7 +185,7 @@ strong {
     font-family: 'WW Digital', sans-serif;
     color:#000;
     background-color: yellow;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -229,13 +231,16 @@ strong {
 
 @media screen and (max-width: 558px) {
     #input-info {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         margin: 0px;
     }
     #rover, #camera, #datepicker {
         margin: 0px;
         width: 150px;
     }
+
     #list {
         text-align: inline;
         display: flex;
@@ -246,5 +251,17 @@ strong {
 @media  screen and (max-width: 1016px) {
     li a {
         padding: 7px;
+    }
+}
+
+@media screen and (max-width: 1183px) {
+    #alignment-rover, #select-camera, #select-date {
+        display: flex;
+        flex-direction: column;
+    }
+    #rover, #camera, #datepicker {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
     }
 }
