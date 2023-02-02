@@ -177,6 +177,10 @@ strong {
     background-color: #000;
 }
 
+.ui-state-default {
+    width: 100%;
+}
+
 #rover-img {
     width: 400px;
 }
