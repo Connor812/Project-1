@@ -160,7 +160,7 @@ function getMarsRoverPic() {
             <div>Landing Date: ${roverData.photos[i].rover.landing_date}</div>
             <div>Sol (Mar's Date): ${solString}</div>
             <div id="save-button" class="save-button">
-            <button id="save-button${i}" value="save-button${i}" class="button save-button">Save Image</button>
+            <button id="save-button${i}" value="save-button${i}" class="button button-style-css">Save Image</button>
             </div>
             </div>
             <div class="column is-flex is-justify-content-center">
@@ -178,7 +178,7 @@ appendToTheTopButton();
 }
 
 function appendToTheTopButton() {
-    toTheTopButton = `<button id="to-the-top" class="button is-warning"><a class="has-text-black" href="#top-of-page">Go To Top Of Page</a></button>`;
+    toTheTopButton = `<button id="to-the-top" class="button button-style-css"><a class="has-text-black" href="#top-of-page">Go To Top Of Page</a></button>`;
     $('#to-the-top-button').append(toTheTopButton);
 }
 
