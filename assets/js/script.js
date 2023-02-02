@@ -160,7 +160,7 @@ function getMarsRoverPic() {
             <div>Landing Date: ${roverData.photos[i].rover.landing_date}</div>
             <div>Sol (Mar's Date): ${solString}</div>
             <div id="save-button" class="save-button">
-            <button id="save-button${i}" value="save-button${i}" class="button is-warning">Save Image</button>
+            <button id="save-button${i}" value="save-button${i}" class="button save-button">Save Image</button>
             </div>
             </div>
             <div class="column is-flex is-justify-content-center">
