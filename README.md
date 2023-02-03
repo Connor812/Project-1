@@ -1,4 +1,4 @@
-# Journey to Space
+# Space Quest
 By: Connor and Nav
 
 ### This was a project assigned by UofT's Full Stack Web Development bootcamp.
@@ -54,4 +54,4 @@ THEN I am able to view the pictures I saved
 ```
 #
 ## Deployment Link
-[Web Accessibility]()
+[Space Quest](https://connor812.github.io/Space-Quest/)
